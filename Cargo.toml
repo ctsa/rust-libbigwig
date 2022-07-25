@@ -1,0 +1,15 @@
+[package]
+name = "rust-libbigwig"
+version = "0.4.0"
+build = "build.rs"
+authors = ["Chris Saunders <csaunders@pacificbiosciences.com>"]
+description = "A rust crate wrapping part of the API of libbigwig, which facilities writing the bigwig file format."
+edition = "2018"
+
+[dependencies]
+libc = "0.2"
+simple-error = "0.3"
+
+[build-dependencies]
+cc = { version = "1", features = ["parallel"] }
+pkg-config = "0.3"
